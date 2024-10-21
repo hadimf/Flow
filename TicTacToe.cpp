@@ -135,7 +135,7 @@ int  main() {
     cout<<"user1 :O"<<endl;
 //  show game
     showGame(inputs);
-    for (int i = 0; i <100000; ++i) {
+    while (true){
         getInputUser1(inputs);
         showGame(inputs);
         u1Win = checkWinUser1(inputs);
