@@ -97,24 +97,40 @@ bool checkFinishGame(string inputs[]){
     return false;
 }
 void getInputUser1(string inputs[]){
-    cout<<"Enter Number 0-9: User1"<<endl;
     int number;
+    bool hasError = true;
+    while (hasError){
+    cout<<"Enter Number 0-9: User1"<<endl;
     cin>>number;
-    if (checkHasInput(inputs,number)){
-        cout<<"Error"<<endl;
-    }else{
-    inputs[number] = "*";
+        if (checkHasInput(inputs,number)){
+            cout<<"Error"<<endl;
+            showGame(inputs);
+
+        }else{
+            inputs[number] = "*";
+            hasError = false;
+        }
+
     }
 
 
+
+
 }void getInputUser2(string inputs[]){
-    cout<<"Enter Number 0-9: User2"<<endl;
     int number;
-    cin>>number;
-    if (checkHasInput(inputs,number)){
-        cout<<"Error"<<endl;
-    }else{
-        inputs[number] = "O";
+    bool hasError = true;
+    while (hasError){
+    cout<<"Enter Number 0-9: User2"<<endl;
+        cin>>number;
+        if (checkHasInput(inputs,number)){
+            cout<<"Error"<<endl;
+            showGame(inputs);
+
+        }else{
+            inputs[number] = "O";
+            hasError = false;
+        }
+
     }
 
 }
