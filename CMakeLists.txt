@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 #add_executable(untitled main.cpp)
 #add_executable(untitled Stars.cpp)
-add_executable(untitled Numbers.cpp)
+#add_executable(untitled Numbers.cpp)
+add_executable(untitled PrimaryNumber.cpp)

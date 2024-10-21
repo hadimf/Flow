@@ -1,14 +1,9 @@
 # ninja log v5
-2	271	7511986977741012	build.ninja	a400cf5cb8d4e14a
 1	422	7511941713648854	CMakeFiles/untitled.dir/main.cpp.obj	467da20adc6c0212
-370	482	7511982673718674	untitled.exe	2d92d31439e53fe8
-3	370	7511982672625193	CMakeFiles/untitled.dir/Stars.cpp.obj	17224c0dbc71225b
-2	457	7511986977741012	build.ninja	a400cf5cb8d4e14a
-1	368	7511986982583648	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
-369	478	7511986983520937	untitled.exe	3cdec7c4d73824ba
-3	365	7511987256157587	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
-366	473	7511987257095004	untitled.exe	3cdec7c4d73824ba
-3	361	7511987598930163	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
-362	482	7511987600179867	untitled.exe	3cdec7c4d73824ba
-3	354	7511988060351440	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
+2	457	7511994826257700	build.ninja	a400cf5cb8d4e14a
 355	488	7511988061757615	untitled.exe	3cdec7c4d73824ba
+3	370	7511982672625193	CMakeFiles/untitled.dir/Stars.cpp.obj	17224c0dbc71225b
+3	354	7511988060351440	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
+1	219	7511994826257700	build.ninja	a400cf5cb8d4e14a
+0	354	7511994830788080	CMakeFiles/untitled.dir/PrimaryNumber.cpp.obj	5e0ed4eb9fe137d7
+355	475	7511994831881579	untitled.exe	41d15697053f806f
