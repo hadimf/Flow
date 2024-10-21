@@ -42,6 +42,39 @@ bool checkWinUser1(string inputs[]){
 
 
 }
+bool checkWinUser2(string inputs[]){
+//    horizon
+    if (inputs[0] == inputs[1] && inputs[0] ==inputs[2] && inputs[0] == "O" ){
+        return true;
+    }
+    if (inputs[3] == inputs[4] && inputs[3] ==inputs[5] && inputs[3] == "O" ){
+        return true;
+    }
+    if (inputs[6] == inputs[7] && inputs[6] ==inputs[8] && inputs[6] == "O" ){
+        return true;
+    }
+
+//    vertical
+    if (inputs[0] == inputs[3] && inputs[0] ==inputs[6] && inputs[0] == "O" ){
+        return true;
+    }
+    if (inputs[1] == inputs[4] && inputs[1] ==inputs[7] && inputs[1] == "O" ){
+        return true;
+    }
+    if (inputs[2] == inputs[5] && inputs[2] ==inputs[8] && inputs[2] == "O" ){
+        return true;
+    }
+
+//    orib
+    if (inputs[0] == inputs[4] && inputs[0] ==inputs[8] && inputs[0] == "O" ){
+        return true;
+    }
+    if (inputs[2] == inputs[4] && inputs[2] ==inputs[6] && inputs[2] == "O" ){
+        return true;
+    }
+
+
+}
 void getInputUser1(string inputs[]){
     cout<<"Enter Number 0-9: User1"<<endl;
     int number;
