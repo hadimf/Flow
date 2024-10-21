@@ -1,17 +1,17 @@
 # ninja log v5
+1	185	7512121897157285	build.ninja	a400cf5cb8d4e14a
 1	422	7511941713648854	CMakeFiles/untitled.dir/main.cpp.obj	467da20adc6c0212
-1	172	7512110382812716	build.ninja	a400cf5cb8d4e14a
-361	490	7512109062112979	untitled.exe	3cdec7c4d73824ba
-0	485	7511998531795274	CMakeFiles/untitled.dir/Factorial.cpp.obj	f2879c645106820d
+364	490	7512110388280597	untitled.exe	88f601f8737b6ec7
 0	356	7512018381289238	CMakeFiles/untitled.dir/Absolute.cpp.obj	b910976d1acf61b9
 3	363	7512108199927551	CMakeFiles/untitled.dir/Stars.cpp.obj	17224c0dbc71225b
+0	485	7511998531795274	CMakeFiles/untitled.dir/Factorial.cpp.obj	f2879c645106820d
 0	360	7512109060863264	CMakeFiles/untitled.dir/Numbers.cpp.obj	d75bb01d2ac3b155
 0	354	7511994830788080	CMakeFiles/untitled.dir/PrimaryNumber.cpp.obj	5e0ed4eb9fe137d7
 1	332	7512006768880349	CMakeFiles/untitled.dir/EvvenOdd.cpp.obj	d4c968b3573f8258
 3	410	7512013127317908	CMakeFiles/untitled.dir/Average.cpp.obj	6c4273f777aa3c3d
 0	435	7512016098704277	CMakeFiles/untitled.dir/Mashroot.cpp.obj	c91dfe59ff1c2e0e
-5	375	7512023430588622	CMakeFiles/untitled.dir/Fibo.cpp.obj	7e78e81c3783a705
-3	406	7512097341677186	CMakeFiles/untitled.dir/TicTacToe.cpp.obj	c65d72113fce503c
-1	185	7512110382812716	build.ninja	a400cf5cb8d4e14a
 0	363	7512110387030870	CMakeFiles/untitled.dir/Fibo.cpp.obj	7e78e81c3783a705
-364	490	7512110388280597	untitled.exe	88f601f8737b6ec7
+3	406	7512097341677186	CMakeFiles/untitled.dir/TicTacToe.cpp.obj	c65d72113fce503c
+1	173	7512121897157285	build.ninja	a400cf5cb8d4e14a
+3	439	7512121902174477	CMakeFiles/untitled.dir/TicTacToe.cpp.obj	c65d72113fce503c
+440	555	7512121903267989	untitled.exe	4bc9eb3995d1419

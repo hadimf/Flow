@@ -76,11 +76,11 @@ bool checkWinUser2(string inputs[]){
 
 }
 
-bool checkInput(string inputs[],int input){
+bool checkHasInput(string inputs[],int input){
     if (inputs[input] == "*" || inputs[input] == "O"){
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 bool checkFinishGame(string inputs[]){
     if (inputs[0]!="0" &&
@@ -100,13 +100,22 @@ void getInputUser1(string inputs[]){
     cout<<"Enter Number 0-9: User1"<<endl;
     int number;
     cin>>number;
+    if (checkHasInput(inputs,number)){
+        cout<<"Error"<<endl;
+    }else{
     inputs[number] = "*";
+    }
+
 
 }void getInputUser2(string inputs[]){
     cout<<"Enter Number 0-9: User2"<<endl;
     int number;
     cin>>number;
-    inputs[number] = "O";
+    if (checkHasInput(inputs,number)){
+        cout<<"Error"<<endl;
+    }else{
+        inputs[number] = "O";
+    }
 
 }
 
@@ -126,25 +135,29 @@ int  main() {
     cout<<"user1 :O"<<endl;
 //  show game
     showGame(inputs);
-    for (int i = 0; i <5 ; ++i) {
+    for (int i = 0; i <100000; ++i) {
         getInputUser1(inputs);
         showGame(inputs);
-
         u1Win = checkWinUser1(inputs);
         if (u1Win){
             cout<<"User 1 Win";
             break;
         }
-        if (i!=4){
+        if (checkFinishGame(inputs)){
+            break;
+        }
+
         getInputUser2(inputs);
         showGame(inputs);
         u2Win = checkWinUser2(inputs);
         if (u2Win){
             cout<<"User 2 Win";
             break;
-        }} else{
-            showGame(inputs);
         }
+        if (checkFinishGame(inputs)){
+            break;
+        }
+
     }
     if (!u2Win && !u1Win){
         cout<<"Tie";
