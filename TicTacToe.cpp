@@ -75,6 +75,27 @@ bool checkWinUser2(string inputs[]){
 
 
 }
+
+bool checkInput(string inputs[],int input){
+    if (inputs[input] == "*" || inputs[input] == "O"){
+        return false;
+    }
+    return true;
+}
+bool checkFinishGame(string inputs[]){
+    if (inputs[0]!="0" &&
+            inputs[1]!="1" &&
+            inputs[2]!="2" &&
+            inputs[3]!="3" &&
+            inputs[4]!="4" &&
+            inputs[5]!="5" &&
+            inputs[6]!="6" &&
+            inputs[7]!="7" &&
+            inputs[8]!="8"){
+        return true;
+    }
+    return false;
+}
 void getInputUser1(string inputs[]){
     cout<<"Enter Number 0-9: User1"<<endl;
     int number;
@@ -105,7 +126,7 @@ int  main() {
     cout<<"user1 :O"<<endl;
 //  show game
     showGame(inputs);
-    for (int i = 0; i <9 ; ++i) {
+    for (int i = 0; i <5 ; ++i) {
         getInputUser1(inputs);
         showGame(inputs);
 
@@ -114,12 +135,15 @@ int  main() {
             cout<<"User 1 Win";
             break;
         }
+        if (i!=4){
         getInputUser2(inputs);
         showGame(inputs);
         u2Win = checkWinUser2(inputs);
         if (u2Win){
             cout<<"User 2 Win";
             break;
+        }} else{
+            showGame(inputs);
         }
     }
     if (!u2Win && !u1Win){
