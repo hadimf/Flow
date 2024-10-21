@@ -40,19 +40,21 @@ cin >> number;
 //        cout<<endl;
 //    }
 //-------------------
-
-    for (int i = 0; i <number; ++i) {
-        for (int j = number-i; j <number ; ++j) {
-            cout<<" ";
-        }
-        for (int k = i+1; k <=(2*number-1) ; k++) {
-            cout<<"*";
-        }
-        for (int m = number-i; m <number ; ++m) {
-            cout<<" ";
-        }
-        cout<<endl;
-    }
+//    int n =0;
+//    for (int i = 0; i <number; ++i) {
+//        for (int j = number-i; j <number ; ++j) {
+//            cout<<" ";
+//        }
+//        for (int k = n; k <(2*number-1) ; k++) {
+//            cout<<"*";
+//        }
+//        n+=2;
+//
+//        for (int m = number-i; m <number ; ++m) {
+//            cout<<" ";
+//        }
+//        cout<<endl;
+//    }
 
     return 0;
 }
