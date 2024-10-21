@@ -94,6 +94,8 @@ int  main() {
     string inputs[9] = {"0","1","2","3","4","5","6","7","8"};
     string uName1;
     string uName2;
+    bool u1Win = false;
+    bool u2Win = false;
 //    Get Name Users
     cout<<"User 1 Name: "<<endl;
     cin>>uName1;
@@ -103,11 +105,25 @@ int  main() {
     cout<<"user1 :O"<<endl;
 //  show game
     showGame(inputs);
-    for (int i = 0; i <2 ; ++i) {
+    for (int i = 0; i <9 ; ++i) {
         getInputUser1(inputs);
         showGame(inputs);
+
+        u1Win = checkWinUser1(inputs);
+        if (u1Win){
+            cout<<"User 1 Win";
+            break;
+        }
         getInputUser2(inputs);
         showGame(inputs);
+        u2Win = checkWinUser2(inputs);
+        if (u2Win){
+            cout<<"User 2 Win";
+            break;
+        }
+    }
+    if (!u2Win && !u1Win){
+        cout<<"Tie";
     }
 
 
