@@ -18,6 +18,9 @@ bool checkPoints(string inputs[4][4],int point1x,int point1y,int point2x,int poi
     }
     return false;
 }
+void addPoints(string input[4][4],string selects[4][4],int point1x,int point1y,int point2x,int point2y){
+    selects[point1x][point1y] = input[point1x][point1y];
+}
 
 int main() {
     cout<<"Number Guess:"<<endl;
@@ -27,6 +30,11 @@ int main() {
                       {"7","7","8","8"}};
 
     string emptyInput[4][4] ={{" "," ", " ", " "},
+                              {" "," ", " "," "},
+                              {" ", " ", " ", " "},
+                              {" ", " ", " ", " "}};
+
+    string selectInput[4][4] ={{" "," ", " ", " "},
                               {" "," ", " "," "},
                               {" ", " ", " ", " "},
                               {" ", " ", " ", " "}};
@@ -42,6 +50,11 @@ int main() {
     cin>>point1x>>point1y;
     cout<<"Enter Point2: "<<endl;
     cin>>point2x>>point2y;
+    if (checkPoints(input,point1x, point1y,point2x,point2y)){
+        addPoints(input,selectInput,point1x, point1y,point2x,point2y );
+    } else{
+        showGame(emptyInput);
+    }
 
 
 
