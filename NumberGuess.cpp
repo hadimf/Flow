@@ -21,6 +21,21 @@ bool checkPoints(string inputs[4][4],int point1x,int point1y,int point2x,int poi
 void addPoints(string input[4][4],string selects[4][4],int point1x,int point1y,int point2x,int point2y){
     selects[point1x][point1y] = input[point1x][point1y];
 }
+bool checkFinishGame(string selects[4][4]){
+    int c = 0;
+    for (int i = 0; i <4 ; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            if (selects[i][j]!=" "){
+                c++;
+            }
+        }
+    }
+    if (c ==16){
+        return true;
+    } else{
+        return false;
+    }
+}
 
 int main() {
     cout<<"Number Guess:"<<endl;
@@ -46,6 +61,7 @@ int main() {
 
     int point1x, point1y, point2x, point2y;
 //    Get Points
+
     cout<<"Enter Point1: "<<endl;
     cin>>point1x>>point1y;
     cout<<"Enter Point2: "<<endl;
