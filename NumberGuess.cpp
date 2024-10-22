@@ -103,8 +103,8 @@ int main() {
         cout << "Enter Point1: " << endl;
         cin >> point1x >> point1y;
         blink(input, selectInput, point1x, point1y);
-        showGame(selectInput);
         do {
+        showGame(selectInput);
 
 
         cout << "Enter Point2: " << endl;
