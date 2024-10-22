@@ -100,8 +100,17 @@ int main() {
             break;
         }
         bool hasError = false;
-        cout << "Enter Point1: " << endl;
-        cin >> point1x >> point1y;
+        do {
+            cout << "Enter Point1: " << endl;
+            cin >> point1x >> point1y;
+            if((point1x<0 || point1x >3) || (point1y<0 || point1y >3)){
+                hasError = true;
+                cout<<"Point should be 0-3 "<<endl;
+            } else{
+                hasError = false;
+            }
+        } while (hasError);
+
         blink(input, selectInput, point1x, point1y);
         do {
         showGame(selectInput);
