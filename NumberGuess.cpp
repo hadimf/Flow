@@ -12,7 +12,12 @@ void showGame(string inputs[4][4]){
     cout<<"------------------------------------------------------"<<endl;
 
 }
-
+bool checkPoints(string inputs[4][4],int point1x,int point1y,int point2x,int point2y){
+    if (inputs[point1x][point1y] == inputs[point2x][point2y] ){
+        return true;
+    }
+    return false;
+}
 
 int main() {
     cout<<"Number Guess:"<<endl;
@@ -32,11 +37,12 @@ int main() {
 
 
     int point1x, point1y, point2x, point2y;
-//    Get Points 
+//    Get Points
     cout<<"Enter Point1: "<<endl;
     cin>>point1x>>point1y;
     cout<<"Enter Point2: "<<endl;
     cin>>point2x>>point2y;
+
 
 
 
