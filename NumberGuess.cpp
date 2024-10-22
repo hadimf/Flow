@@ -99,12 +99,23 @@ int main() {
         if (checkFinishGame(selectInput)){
             break;
         }
+        bool hasError = false;
         cout << "Enter Point1: " << endl;
         cin >> point1x >> point1y;
         blink(input, selectInput, point1x, point1y);
         showGame(selectInput);
+        do {
+
+
         cout << "Enter Point2: " << endl;
         cin >> point2x >> point2y;
+        if (point1x == point2x && point1y == point2y){
+            cout<<"Duplicate Points!"<<endl;
+            hasError = true;
+        }else{
+            hasError = false;
+
+        }} while (hasError);
         blink(input, selectInput, point2x, point2y);
         showGame(selectInput);
 
