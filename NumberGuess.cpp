@@ -52,8 +52,9 @@ int main() {
     cin>>point2x>>point2y;
     if (checkPoints(input,point1x, point1y,point2x,point2y)){
         addPoints(input,selectInput,point1x, point1y,point2x,point2y );
+        showGame(selectInput);
     } else{
-        showGame(emptyInput);
+        showGame(selectInput);
     }
 
 
