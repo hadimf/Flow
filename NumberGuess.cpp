@@ -112,19 +112,26 @@ int main() {
         } while (hasError);
 
         blink(input, selectInput, point1x, point1y);
-        do {
         showGame(selectInput);
 
 
-        cout << "Enter Point2: " << endl;
-        cin >> point2x >> point2y;
-        if (point1x == point2x && point1y == point2y){
-            cout<<"Duplicate Points!"<<endl;
-            hasError = true;
-        }else{
-            hasError = false;
+            do {
 
-        }} while (hasError);
+
+                cout << "Enter Point2: " << endl;
+                cin >> point2x >> point2y;
+                if((point1x<0 || point1x >3) || (point1y<0 || point1y >3)){
+                    hasError = true;
+                    cout<<"Point should be 0-3 "<<endl;}
+                if (point1x == point2x && point1y == point2y){
+                    cout<<"Duplicate Points!"<<endl;
+                    hasError = true;
+                }else{
+                    hasError = false;
+
+                }} while (hasError);
+
+
         blink(input, selectInput, point2x, point2y);
         showGame(selectInput);
 
