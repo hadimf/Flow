@@ -49,6 +49,13 @@ void addPoints(string input[4][4],string selects[4][4],int point1x,int point1y,i
     selects[point1x][point1y] = input[point1x][point1y];
     selects[point2x][point2y] = input[point1x][point1y];
 }
+void blink(string input[4][4],string selects[4][4],int point1x,int point1y){
+    selects[point1x][point1y] = input[point1x][point1y];
+    showGame(selects);
+    sleep(3);
+    selects[point1x][point1y] = " ";
+
+}
 bool checkFinishGame(string selects[4][4]){
     int c = 0;
     for (int i = 0; i <4 ; ++i) {
