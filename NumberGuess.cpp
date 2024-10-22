@@ -20,6 +20,7 @@ bool checkPoints(string inputs[4][4],int point1x,int point1y,int point2x,int poi
 }
 void addPoints(string input[4][4],string selects[4][4],int point1x,int point1y,int point2x,int point2y){
     selects[point1x][point1y] = input[point1x][point1y];
+    selects[point2x][point2y] = input[point1x][point1y];
 }
 bool checkFinishGame(string selects[4][4]){
     int c = 0;
