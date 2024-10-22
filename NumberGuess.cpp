@@ -101,8 +101,13 @@ int main() {
         }
         cout << "Enter Point1: " << endl;
         cin >> point1x >> point1y;
+        blink(input, selectInput, point1x, point1y);
+        showGame(selectInput);
         cout << "Enter Point2: " << endl;
         cin >> point2x >> point2y;
+        blink(input, selectInput, point2x, point2y);
+        showGame(selectInput);
+
         if (checkPoints(input, point1x, point1y, point2x, point2y)) {
             addPoints(input, selectInput, point1x, point1y, point2x, point2y);
             showGame(selectInput);
