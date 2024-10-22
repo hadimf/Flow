@@ -53,7 +53,15 @@ void blink(string input[4][4],string selects[4][4],int point1x,int point1y){
     selects[point1x][point1y] = input[point1x][point1y];
     showGame(selects);
     sleep(3);
+//    selects[point1x][point1y] = " ";
+
+}
+void blink2(string input[4][4],string selects[4][4],int point1x,int point1y,int point2x,int point2y){
+    selects[point1x][point1y] = input[point1x][point1y];
+    showGame(selects);
+    sleep(3);
     selects[point1x][point1y] = " ";
+    selects[point2x][point2y] = " ";
 
 }
 bool checkFinishGame(string selects[4][4]){
@@ -123,7 +131,7 @@ int main() {
         } while (hasError);
 
         blink(input, selectInput, point1x, point1y);
-        showGame(selectInput);
+//        showGame(selectInput);
 
 
         do {
@@ -146,14 +154,14 @@ int main() {
             }} while (hasError);
 
 
-        blink(input, selectInput, point2x, point2y);
+        blink2(input, selectInput, point2x, point2y, point1x, point1y);
         showGame(selectInput);
 
         if (checkPoints(input, point1x, point1y, point2x, point2y)) {
             addPoints(input, selectInput, point1x, point1y, point2x, point2y);
             showGame(selectInput);
         } else {
-            showGame(selectInput);
+//            showGame(selectInput);
         }
     }
 
