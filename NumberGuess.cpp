@@ -1,7 +1,34 @@
 #include <iostream>
 #include <unistd.h>
+#include <bits/stdc++.h>
 
 using namespace std;
+void generateGame(string input[4][4]){
+    srand(time(0));
+    map<int, int> dict;
+    dict[1] =  dict[2] =  dict[3] =  dict[4]=  dict[5]=  dict[6]=  dict[7]=  dict[8] =0;
+    for (int i = 0; i <4 ; ++i) {
+        for (int j = 0; j < 4; ++j) {
+
+            while (true){
+
+                int number = ((rand() % 8)+1);
+                if (dict[number]==2){
+
+                }else{
+                    int value = dict[number];
+                    value++;
+                    dict[number]=value;
+                    input[i][j] = to_string(number);
+                    break;
+                }
+            }
+
+
+
+        }
+    }
+}
 void showGame(string inputs[4][4]){
     cout<<"    0 1 2 3"<<endl<<endl;
     cout<<"0   "<<inputs[0][0]<<" "<<inputs[0][1]<<" "<<inputs[0][2]<<" "<<inputs[0][3]<<endl;
@@ -40,10 +67,10 @@ bool checkFinishGame(string selects[4][4]){
 
 int main() {
     cout<<"Number Guess:"<<endl;
-    string input[4][4]= {{"1","1","2","2"},
-                      {"3","3","4","4"},
-                      {"5","5","6","6"},
-                      {"7","7","8","8"}};
+    string input[4][4]= {{" "," ", " ", " "},
+                         {" "," ", " "," "},
+                         {" ", " ", " ", " "},
+                         {" ", " ", " ", " "}};
 
 
 
@@ -51,6 +78,7 @@ int main() {
                               {" "," ", " "," "},
                               {" ", " ", " ", " "},
                               {" ", " ", " ", " "}};
+    generateGame(input);
 
 
     showGame(input);
