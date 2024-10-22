@@ -62,17 +62,21 @@ int main() {
     int point1x, point1y, point2x, point2y;
 //    Get Points
 
-    cout<<"Enter Point1: "<<endl;
-    cin>>point1x>>point1y;
-    cout<<"Enter Point2: "<<endl;
-    cin>>point2x>>point2y;
-    if (checkPoints(input,point1x, point1y,point2x,point2y)){
-        addPoints(input,selectInput,point1x, point1y,point2x,point2y );
-        showGame(selectInput);
-    } else{
-        showGame(selectInput);
+    while (true) {
+        if (checkFinishGame(selectInput)){
+            break;
+        }
+        cout << "Enter Point1: " << endl;
+        cin >> point1x >> point1y;
+        cout << "Enter Point2: " << endl;
+        cin >> point2x >> point2y;
+        if (checkPoints(input, point1x, point1y, point2x, point2y)) {
+            addPoints(input, selectInput, point1x, point1y, point2x, point2y);
+            showGame(selectInput);
+        } else {
+            showGame(selectInput);
+        }
     }
-
 
 
 
