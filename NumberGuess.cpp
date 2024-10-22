@@ -71,6 +71,13 @@ bool checkFinishGame(string selects[4][4]){
         return false;
     }
 }
+bool checkIsExist(string selects[4][4],int point1x,int point1y){
+    if (selects[point1x][point1y]!= " "){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 int main() {
     cout<<"Number Guess:"<<endl;
@@ -82,9 +89,9 @@ int main() {
 
 
     string selectInput[4][4] ={{" "," ", " ", " "},
-                              {" "," ", " "," "},
-                              {" ", " ", " ", " "},
-                              {" ", " ", " ", " "}};
+                               {" "," ", " "," "},
+                               {" ", " ", " ", " "},
+                               {" ", " ", " ", " "}};
     generateGame(input);
 
 
@@ -106,7 +113,11 @@ int main() {
             if((point1x<0 || point1x >3) || (point1y<0 || point1y >3)){
                 hasError = true;
                 cout<<"Point should be 0-3 "<<endl;
-            } else{
+            }else if (checkIsExist(selectInput,point1x, point1y)){
+                hasError = true;
+                cout<<"Choice another point"<<endl;
+
+            }else{
                 hasError = false;
             }
         } while (hasError);
@@ -115,21 +126,24 @@ int main() {
         showGame(selectInput);
 
 
-            do {
+        do {
 
 
-                cout << "Enter Point2: " << endl;
-                cin >> point2x >> point2y;
-                if((point1x<0 || point1x >3) || (point1y<0 || point1y >3)){
-                    hasError = true;
-                    cout<<"Point should be 0-3 "<<endl;}
-                if (point1x == point2x && point1y == point2y){
-                    cout<<"Duplicate Points!"<<endl;
-                    hasError = true;
-                }else{
-                    hasError = false;
+            cout << "Enter Point2: " << endl;
+            cin >> point2x >> point2y;
+            if((point1x<0 || point1x >3) || (point1y<0 || point1y >3)){
+                hasError = true;
+                cout<<"Point should be 0-3 "<<endl;
+            }else if (point1x == point2x && point1y == point2y){
+                cout<<"Duplicate Points!"<<endl;
+                hasError = true;
+            }else if (checkIsExist(selectInput,point2x, point2y)){
+                hasError = true;
+                cout<<"Choice another point"<<endl;
+            }else{
+                hasError = false;
 
-                }} while (hasError);
+            }} while (hasError);
 
 
         blink(input, selectInput, point2x, point2y);
