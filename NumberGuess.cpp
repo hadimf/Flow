@@ -45,10 +45,7 @@ int main() {
                       {"5","5","6","6"},
                       {"7","7","8","8"}};
 
-    string emptyInput[4][4] ={{" "," ", " ", " "},
-                              {" "," ", " "," "},
-                              {" ", " ", " ", " "},
-                              {" ", " ", " ", " "}};
+
 
     string selectInput[4][4] ={{" "," ", " ", " "},
                               {" "," ", " "," "},
@@ -57,7 +54,7 @@ int main() {
 
 
     showGame(input);
-    showGame(emptyInput);
+    showGame(selectInput);
 
 
     int point1x, point1y, point2x, point2y;
